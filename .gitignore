@@ -1,0 +1,6 @@
+.vscode
+.gradle
+build
+
+app/src/main/java/mahmh/customdsa/Trial.java
+**/*.class
