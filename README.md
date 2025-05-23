@@ -3,7 +3,7 @@ This project showcases my custom implementations of popular Data Structures and 
 
 ## Implemented DSA
 ### Arrays
-- 
+- [Singly Linked List](app/src/main/java/mahmh/customdsa/arrays/SinglyLinkedList.java)
 
 ### Graphs
 - 
