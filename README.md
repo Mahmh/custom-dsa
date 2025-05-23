@@ -5,6 +5,7 @@ This project showcases my custom implementations of popular Data Structures and 
 ### Arrays
 - [Singly Linked List](app/src/main/java/mahmh/customdsa/arrays/SinglyLinkedList.java)
 - [Stack](app/src/main/java/mahmh/customdsa/arrays/Stack.java)
+- [Queue](app/src/main/java/mahmh/customdsa/arrays/Queue.java)
 
 ### Graphs
 - 

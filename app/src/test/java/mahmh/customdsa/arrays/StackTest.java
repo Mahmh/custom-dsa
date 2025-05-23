@@ -1,6 +1,9 @@
 package mahmh.customdsa.arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import mahmh.customdsa.utils.Data;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StackTest {
@@ -13,12 +16,12 @@ public class StackTest {
 
     @Test
     public void testPushPopSingleItem() {
-        Stack.Data data = new Stack.Data("Maximus");
+        Data data = new Data("Maximus");
         stack.push(data);
 
         assertEquals(1, stack.size());
 
-        Stack.Data popped = stack.pop();
+        Data popped = stack.pop();
         assertEquals("Maximus", popped.name());
 
         assertEquals(0, stack.size());
@@ -26,9 +29,9 @@ public class StackTest {
 
     @Test
     public void testPushPopMultipleItems_LIFO() {
-        stack.push(new Stack.Data("A"));
-        stack.push(new Stack.Data("B"));
-        stack.push(new Stack.Data("C"));
+        stack.push(new Data("A"));
+        stack.push(new Data("B"));
+        stack.push(new Data("C"));
 
         assertEquals(3, stack.size());
 
@@ -56,9 +59,9 @@ public class StackTest {
     @Test
     public void testSizeGrowsAndShrinksCorrectly() {
         assertEquals(0, stack.size());
-        stack.push(new Stack.Data("One"));
+        stack.push(new Data("One"));
         assertEquals(1, stack.size());
-        stack.push(new Stack.Data("Two"));
+        stack.push(new Data("Two"));
         assertEquals(2, stack.size());
         stack.pop();
         assertEquals(1, stack.size());

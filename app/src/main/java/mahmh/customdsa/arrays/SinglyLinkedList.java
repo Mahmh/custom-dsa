@@ -1,8 +1,8 @@
 package mahmh.customdsa.arrays;
+import mahmh.customdsa.utils.Data;
 
 public class SinglyLinkedList {
     private Node root;
-    public static record Data(String name) {}
     public static class Node {
         public Node next;
         public Data data;
@@ -115,6 +115,19 @@ public class SinglyLinkedList {
                 currentIdx++;
             }
         }
+    }
+
+    /** Returns the number of items in the list. */
+    public int size() {
+        Node currentNode = root;
+        int size = 0;
+
+        while (currentNode != null) {
+            size++;
+            currentNode = currentNode.next;
+        }
+
+        return size;
     }
 
     /** Runnable example. */

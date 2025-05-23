@@ -1,38 +1,38 @@
 package mahmh.customdsa.arrays;
 import mahmh.customdsa.utils.Data;
 
-public class Stack {
+public class Queue {
     private final SinglyLinkedList array = new SinglyLinkedList();
 
-    /** Puts the data item on the top of the stack. */
+    /** Puts the data item to the end of the queue. */
     public void push(Data data) {
         array.append(data);
     }
 
-    /** Removes & returns the data item on the top of the stack. */
+    /** Removes & returns the data item from the front of the queue. */
     public Data pop() {
-        final int idx = array.size() - 1;
-
-        if (idx < 0) {
+        if (array.size() == 0) {
             return null;
         } else {
-            Data data = array.get(idx);
-            array.delete(idx);
+            Data data = array.get(0);
+            array.delete(0);
             return data;
         }
     }
 
-    /** Returns the number of items in the stack. */
+    /** Returns the number of items in the queue. */
     public int size() {
         return array.size();
     }
 
     /** Runnable example. */
     public static void main(String[] args) {
-        Stack s = new Stack();
-        s.push(new Data("John"));
-        s.push(new Data("Andrew"));
+        Queue s = new Queue();
+        s.push(new Data("First"));
+        s.push(new Data("Second"));
+        s.push(new Data("Third"));
         System.out.println("size: " + s.size());
+        System.out.println(s.pop());
         System.out.println(s.pop());
         System.out.println(s.pop());
         System.out.println("size: " + s.size());

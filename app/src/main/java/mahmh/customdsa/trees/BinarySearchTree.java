@@ -1,8 +1,8 @@
 package mahmh.customdsa.trees;
+import mahmh.customdsa.utils.Data;
 
 public class BinarySearchTree {
     private Node root;
-    public static record Data(String name) {}
     public static class Node {
         public int id;
         public Node leftChild;
