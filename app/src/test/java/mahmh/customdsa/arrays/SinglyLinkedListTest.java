@@ -20,29 +20,29 @@ public class SinglyLinkedListTest {
         list.append(new Data("B"));
         list.append(new Data("C"));
 
-        assertEquals("A", list.get(0).name());
-        assertEquals("B", list.get(1).name());
-        assertEquals("C", list.get(2).name());
+        assertEquals("A", list.get(0).get("name"));
+        assertEquals("B", list.get(1).get("name"));
+        assertEquals("C", list.get(2).get("name"));
     }
 
     @Test
     public void testInsertAtBeginning() {
         list.append(new Data("B"));
-        list.insert(new Data("A"), 0);
+        list.insert(0, new Data("A"));
 
-        assertEquals("A", list.get(0).name());
-        assertEquals("B", list.get(1).name());
+        assertEquals("A", list.get(0).get("name"));
+        assertEquals("B", list.get(1).get("name"));
     }
 
     @Test
     public void testInsertInMiddle() {
         list.append(new Data("A"));
         list.append(new Data("C"));
-        list.insert(new Data("B"), 1);
+        list.insert(1, new Data("B"));
 
-        assertEquals("A", list.get(0).name());
-        assertEquals("B", list.get(1).name());
-        assertEquals("C", list.get(2).name());
+        assertEquals("A", list.get(0).get("name"));
+        assertEquals("B", list.get(1).get("name"));
+        assertEquals("C", list.get(2).get("name"));
     }
 
     @Test
@@ -51,7 +51,7 @@ public class SinglyLinkedListTest {
         list.append(new Data("B"));
         list.delete(0);
 
-        assertEquals("B", list.get(0).name());
+        assertEquals("B", list.get(0).get("name"));
     }
 
     @Test
@@ -61,8 +61,8 @@ public class SinglyLinkedListTest {
         list.append(new Data("C"));
         list.delete(1);
 
-        assertEquals("A", list.get(0).name());
-        assertEquals("C", list.get(1).name());
+        assertEquals("A", list.get(0).get("name"));
+        assertEquals("C", list.get(1).get("name"));
     }
 
     @Test
@@ -80,7 +80,7 @@ public class SinglyLinkedListTest {
 
     @Test
     public void testInsertInvalidIndex() {
-        assertThrows(NullPointerException.class, () -> list.insert(new Data("X"), 5));
+        assertThrows(NullPointerException.class, () -> list.insert(5, new Data("X")));
     }
 
     @Test

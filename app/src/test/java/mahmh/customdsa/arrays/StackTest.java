@@ -22,7 +22,7 @@ public class StackTest {
         assertEquals(1, stack.size());
 
         Data popped = stack.pop();
-        assertEquals("Maximus", popped.name());
+        assertEquals("Maximus", popped.get("name"));
 
         assertEquals(0, stack.size());
     }
@@ -35,9 +35,9 @@ public class StackTest {
 
         assertEquals(3, stack.size());
 
-        assertEquals("C", stack.pop().name());
-        assertEquals("B", stack.pop().name());
-        assertEquals("A", stack.pop().name());
+        assertEquals("C", stack.pop().get("name"));
+        assertEquals("B", stack.pop().get("name"));
+        assertEquals("A", stack.pop().get("name"));
 
         assertEquals(0, stack.size());
     }

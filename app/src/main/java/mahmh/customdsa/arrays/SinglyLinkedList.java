@@ -75,7 +75,7 @@ public class SinglyLinkedList {
     }
 
     /** Inserts a data item at a given index. */
-    public void insert(Data data, int idx) {
+    public void insert(int idx, Data data) throws AssertionError {
         assert idx >= 0 : "Index must be non-negative.";
         Node nodeToAdd = new Node(data);
         Node currentNode = root;
@@ -98,7 +98,7 @@ public class SinglyLinkedList {
     }
 
     /** Removes a data item out of the list. */
-    public void delete(int idx) {
+    public void delete(int idx) throws AssertionError {
         assert idx >= 0 : "Index must be non-negative.";
         Node currentNode = root;
         int currentIdx = 0;

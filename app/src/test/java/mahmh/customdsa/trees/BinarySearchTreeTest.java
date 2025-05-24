@@ -22,17 +22,17 @@ public class BinarySearchTreeTest {
         bst.add(new BinarySearchTree.Node(3, new Data("three")));
         bst.add(new BinarySearchTree.Node(7, new Data("seven")));
 
-        assertEquals("five", bst.get(5).name());
-        assertEquals("fifteen", bst.get(15).name());
-        assertEquals("three", bst.get(3).name());
-        assertEquals("seven", bst.get(7).name());
+        assertEquals("five", bst.get(5).get("name"));
+        assertEquals("fifteen", bst.get(15).get("name"));
+        assertEquals("three", bst.get(3).get("name"));
+        assertEquals("seven", bst.get(7).get("name"));
     }
 
     @Test
     public void testRetrieveRootNode() {
         Data result = bst.get(10);
         assertNotNull(result);
-        assertEquals("root", result.name());
+        assertEquals("root", result.get("name"));
     }
 
     @Test
@@ -51,14 +51,14 @@ public class BinarySearchTreeTest {
     public void testGetDataWithMinId() {
         bst.add(new BinarySearchTree.Node(1, new Data("min")));
         bst.add(new BinarySearchTree.Node(20, new Data("max")));
-        assertEquals("min", bst.getDataWithMinId().name());
+        assertEquals("min", bst.getDataWithMinId().get("name"));
     }
 
     @Test
     public void testGetDataWithMaxId() {
         bst.add(new BinarySearchTree.Node(1, new Data("min")));
         bst.add(new BinarySearchTree.Node(20, new Data("max")));
-        assertEquals("max", bst.getDataWithMaxId().name());
+        assertEquals("max", bst.getDataWithMaxId().get("name"));
     }
 
     @Test

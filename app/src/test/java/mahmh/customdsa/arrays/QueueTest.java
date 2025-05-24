@@ -18,7 +18,7 @@ public class QueueTest {
         queue.push(item);
 
         assertEquals(1, queue.size());
-        assertEquals("Alpha", queue.pop().name());
+        assertEquals("Alpha", queue.pop().get("name"));
         assertEquals(0, queue.size());
     }
 
@@ -29,9 +29,9 @@ public class QueueTest {
         queue.push(new Data("Third"));
 
         assertEquals(3, queue.size());
-        assertEquals("First", queue.pop().name());
-        assertEquals("Second", queue.pop().name());
-        assertEquals("Third", queue.pop().name());
+        assertEquals("First", queue.pop().get("name"));
+        assertEquals("Second", queue.pop().get("name"));
+        assertEquals("Third", queue.pop().get("name"));
         assertEquals(0, queue.size());
     }
 

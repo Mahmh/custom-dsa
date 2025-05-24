@@ -8,7 +8,7 @@ This project showcases my custom implementations of popular Data Structures and 
 - [Queue](app/src/main/java/mahmh/customdsa/arrays/Queue.java)
 
 ### Graphs
-- 
+- [Dijkstra](app/src/main/java/mahmh/customdsa/graphs/Dijkstra.java)
 
 ### Trees
 - [Binary Search Tree (BST)](app/src/main/java/mahmh/customdsa/trees/BinarySearchTree.java)
