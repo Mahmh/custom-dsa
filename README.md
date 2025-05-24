@@ -10,6 +10,7 @@ This project showcases my custom implementations of popular Data Structures and 
 ### Graphs
 - [Dijkstra](app/src/main/java/mahmh/customdsa/graphs/Dijkstra.java)
 - [Depth First Search (DFS)](app/src/main/java/mahmh/customdsa/graphs/DepthFirstSearch.java)
+- [Breadth First Search (BFS)](app/src/main/java/mahmh/customdsa/graphs/BreadthFirstSearch.java)
 
 ### Trees
 - [Binary Search Tree (BST)](app/src/main/java/mahmh/customdsa/trees/BinarySearchTree.java)

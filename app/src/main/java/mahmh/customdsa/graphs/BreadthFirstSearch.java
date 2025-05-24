@@ -1,12 +1,12 @@
 package mahmh.customdsa.graphs;
 import java.util.*;
 
-public class DepthFirstSearch {
+public class BreadthFirstSearch {
     public record Node(String id) {}
     public record Connection(Node a, Node b) {}
     private final List<Connection> connections = new ArrayList<>();
 
-    public DepthFirstSearch() {}
+    public BreadthFirstSearch() {}
 
     /** Adds a connection edge between two nodes. */
     public void connect(Node a, Node b) {
@@ -17,14 +17,14 @@ public class DepthFirstSearch {
     public List<Node> getPath(Node from, Node to) {
         Map<Node, Boolean> visited = new HashMap<>();
         Map<Node, Node> previous = new HashMap<>();
-        Stack<Node> stack = new Stack<>();
+        Queue<Node> queue = new LinkedList<>();
 
-        stack.push(from);
+        queue.add(from);
         visited.put(from, true);
         previous.put(from, null);
 
-        while (!stack.isEmpty()) {
-            Node current = stack.pop();
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
 
             if (current.equals(to)) break; // found destination
 
@@ -32,7 +32,7 @@ public class DepthFirstSearch {
                 if (!Boolean.TRUE.equals(visited.get(neighbor))) {
                     visited.put(neighbor, true);
                     previous.put(neighbor, current);
-                    stack.push(neighbor);
+                    queue.add(neighbor);
                 }
             }
         }
@@ -65,7 +65,7 @@ public class DepthFirstSearch {
         Node G = new Node("G");
         Node H = new Node("H");
         Node I = new Node("I");
-        DepthFirstSearch graph = new DepthFirstSearch();
+        BreadthFirstSearch graph = new BreadthFirstSearch();
 
         graph.connect(A, B);
         graph.connect(A, G);
