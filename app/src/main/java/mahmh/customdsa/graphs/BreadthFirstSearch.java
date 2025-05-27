@@ -2,8 +2,8 @@ package mahmh.customdsa.graphs;
 import java.util.*;
 
 public class BreadthFirstSearch {
-    public record Node(String id) {}
-    public record Connection(Node a, Node b) {}
+    public static record Node(String id) {}
+    public static record Connection(Node a, Node b) {}
     private final List<Connection> connections = new ArrayList<>();
 
     public BreadthFirstSearch() {}

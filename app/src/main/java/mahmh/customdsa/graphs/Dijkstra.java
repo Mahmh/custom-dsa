@@ -2,8 +2,8 @@ package mahmh.customdsa.graphs;
 import java.util.*;
 
 public class Dijkstra {
-    public record Node(String id) {}
-    public record Connection(Node a, Node b, double distance) {}
+    public static record Node(String id) {}
+    public static record Connection(Node a, Node b, double distance) {}
     private final List<Connection> connections = new ArrayList<>();
     private final Map<Node, Double> shortestDistances = new HashMap<>();
     private final Map<Node, Node> previousNodes = new HashMap<>();

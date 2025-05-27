@@ -14,7 +14,8 @@ Plus, I write unit tests for each DSA I implement to make sure all DSAs work cor
 - [Dijkstra's Algorithm](app/src/main/java/mahmh/customdsa/graphs/Dijkstra.java)
 - [Depth First Search (DFS)](app/src/main/java/mahmh/customdsa/graphs/DepthFirstSearch.java)
 - [Breadth First Search (BFS)](app/src/main/java/mahmh/customdsa/graphs/BreadthFirstSearch.java)
-- [Topological Sort](app/src/test/java/mahmh/customdsa/graphs/TopologicalSort.java)
+- [Topological Sort](app/src/main/java/mahmh/customdsa/graphs/TopologicalSort.java)
 
 ### Trees
 - [Binary Search Tree (BST)](app/src/main/java/mahmh/customdsa/trees/BinarySearchTree.java)
+- [Lowest Common Ancestor (LCA)](app/src/main/java/mahmh/customdsa/trees/LowestCommonAncestor.java)

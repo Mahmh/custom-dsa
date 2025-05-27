@@ -2,8 +2,8 @@ package mahmh.customdsa.graphs;
 import java.util.*;
 
 public class TopologicalSort {
-    public record Node(String id) {}
-    public record Connection(Node from, Node to) {}
+    public static record Node(String id) {}
+    public static record Connection(Node from, Node to) {}
 
     /** Returns the topologically-sorted nodes only if the given graph is a directed acyclic graph (DAG). */
     public static List<Node> sort(List<Node> nodes, List<Connection> connections) throws Error {
