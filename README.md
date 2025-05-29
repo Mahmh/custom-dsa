@@ -20,3 +20,4 @@ Plus, I write unit tests for each DSA I implement to make sure all DSAs work cor
 - [Binary Search Tree (BST)](app/src/main/java/mahmh/customdsa/trees/BinarySearchTree.java)
 - [Lowest Common Ancestor (LCA)](app/src/main/java/mahmh/customdsa/trees/LowestCommonAncestor.java)
 - [Trie (Prefix Tree)](app/src/main/java/mahmh/customdsa/trees/Trie.java)
+- [AVL Tree](app/src/main/java/mahmh/customdsa/trees/AVLTree.java)
